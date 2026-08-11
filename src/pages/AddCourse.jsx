@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { ArrowLeft, BookOpen, Save, X } from "lucide-react";
 
-import "./addcourse.css";
+import "./AddCourse.css";
 
 
 function AddCourse() {
