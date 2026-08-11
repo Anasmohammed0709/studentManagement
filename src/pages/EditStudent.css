@@ -1,0 +1,226 @@
+.edit-student-page {
+  width: 100%;
+  max-width: 900px;
+}
+
+.edit-student-header {
+  margin-bottom: 25px;
+}
+
+.edit-student-header .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.edit-student-header .back-link:hover {
+  color: #1d4ed8;
+}
+
+.edit-student-header h1 {
+  margin: 0 0 6px;
+  color: #111827;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.edit-student-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.edit-student-card {
+  width: 100%;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.edit-student-form-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.edit-student-form-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.edit-student-form-title h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.edit-student-form-title p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.edit-student-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.edit-student-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.edit-student-form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.edit-student-form-group label {
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.edit-student-form-group input,
+.edit-student-form-group select,
+.edit-student-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #1e293b;
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.edit-student-form-group input::placeholder,
+.edit-student-form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.edit-student-form-group input:focus,
+.edit-student-form-group select:focus,
+.edit-student-form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow:0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.edit-student-form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.edit-student-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cancel-edit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 17px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-edit-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.update-student-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 17px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.update-student-btn:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 700px) {
+
+  .edit-student-page {
+    max-width: 100%;
+  }
+
+  .edit-student-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-student-form-group.full-width {
+    grid-column: auto;
+  }
+
+  .edit-student-card {
+    padding: 20px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .edit-student-header h1 {
+    font-size: 25px;
+  }
+
+  .edit-student-form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .cancel-edit-btn,
+  .update-student-btn {
+    width: 100%;
+  }
+
+}

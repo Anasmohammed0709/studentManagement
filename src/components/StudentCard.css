@@ -1,0 +1,131 @@
+.student-card {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 18px 24px;
+  gap: 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.2s ease;
+}
+
+.student-card:last-child {
+  border-bottom: none;
+}
+
+.student-card:hover {
+  background: #f8fafc;
+}
+
+.student-card-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.student-avatar {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.student-card-info {
+  min-width: 0;
+}
+
+.student-card-info h4 {
+  margin: 0 0 6px;
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.student-email {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.student-email svg {
+  color: #94a3b8;
+}
+
+.student-card-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+}
+
+.student-course {
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.student-year {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.student-view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border: 1px solid #dbeafe;
+  border-radius: 7px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.student-view-btn:hover {
+  background: #dbeafe;
+  border-color: #bfdbfe;
+}
+
+@media (max-width: 700px) {
+
+  .student-card {
+    padding: 15px 18px;
+  }
+
+  .student-card-details {
+    min-width: auto;
+  }
+
+  .student-year {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .student-card-details {
+    display: none;
+  }
+
+}
