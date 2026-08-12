@@ -1,17 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar/Navbar";
+import Sidebar from "./components/Sidebar/Sidebar";
 
-import Dashboard from "./pages/Dashboard";
-import Students from "./pages/Students";
-import AddStudent from "./pages/AddStudent";
-import EditStudent from "./pages/EditStudent";
-import StudentDetails from "./pages/StudentDetails";
-import Courses from "./pages/Courses";
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
-import AddCourse from "./pages/AddCourse";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Students from "./pages/Students/Students";
+import AddStudent from "./pages/Students/AddStudent";
+import EditStudent from "./pages/Students/EditStudent";
+import StudentDetails from "./pages/Students/StudentDetails";
+import Courses from "./pages/Courses/Courses";
+import About from "./pages/About/About";
+import NotFound from "./pages/Other/NotFound";
+import AddCourse from "./pages/Courses/AddCourse";
 
 
 function App() {
