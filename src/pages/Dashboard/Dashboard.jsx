@@ -12,15 +12,9 @@ function Dashboard() {
 
   const totalStudents = students.length;
 
-  const totalCourses = new Set(
-    students.map(
-      (student) => student.course
-    )
-  ).size;
+  const totalCourses = new Set(students.map((student) => student.course )).size;
 
-  const recentStudents = [...students]
-    .reverse()
-    .slice(0, 5);
+  const recentStudents = [...students].reverse().slice(0, 5);
 
   return (
 
@@ -30,9 +24,7 @@ function Dashboard() {
 
         <div>
 
-          <h1>
-            Dashboard
-          </h1>
+          <h1> Dashboard</h1>
 
           <p>
             Welcome back! Here's what's happening
@@ -43,29 +35,19 @@ function Dashboard() {
 
         <div className="dashboard-actions">
 
-          <Link
-            to="/students/add"
-            className="add-student-btn"
-          >
+          <Link to="/students/add" className="add-student-btn">
 
             <UserPlus size={17} />
 
-            <span>
-              Add Student
-            </span>
+            <span> Add Student </span>
 
           </Link>
 
-          <Link
-            to="/courses/add"
-            className="add-course-btn"
-          >
+          <Link to="/courses/add" className="add-course-btn">
 
             <BookOpen size={17} />
 
-            <span>
-              Add Course
-            </span>
+            <span> Add Course</span>
 
           </Link>
 
@@ -85,13 +67,9 @@ function Dashboard() {
 
           <div>
 
-            <span>
-              Total Students
-            </span>
+            <span> Total Students</span>
 
-            <strong>
-              {totalStudents}
-            </strong>
+            <strong> {totalStudents}</strong>
 
           </div>
 
@@ -107,13 +85,9 @@ function Dashboard() {
 
           <div>
 
-            <span>
-              Total Courses
-            </span>
+            <span>  Total Courses</span>
 
-            <strong>
-              {totalCourses}
-            </strong>
+            <strong> {totalCourses} </strong>
 
           </div>
 
@@ -127,24 +101,15 @@ function Dashboard() {
 
           <div>
 
-            <h2>
-              Recent Students
-            </h2>
+            <h2> Recent Students</h2>
 
-            <p>
-              Recently added students
-            </p>
+            <p> Recently added students </p>
 
           </div>
 
-          <Link
-            to="/students"
-            className="view-all-link"
-          >
+          <Link to="/students" className="view-all-link">
 
-            <span>
-              View All
-            </span>
+            <span> View All</span>
 
             <ArrowRight size={15} />
 
@@ -160,14 +125,9 @@ function Dashboard() {
 
               <GraduationCap size={35} />
 
-              <p>
-                No students added yet.
-              </p>
+              <p>  No students added yet.</p>
 
-              <Link
-                to="/students/add"
-                className="empty-add-btn"
-              >
+              <Link to="/students/add" className="empty-add-btn">
                 Add Student
               </Link>
 
@@ -185,21 +145,15 @@ function Dashboard() {
 
                   <div className="recent-student-avatar">
 
-                    {student.name
-                      .charAt(0)
-                      .toUpperCase()}
+                    {student.name.charAt(0).toUpperCase()}
 
                   </div>
 
                   <div className="recent-student-info">
 
-                    <h3>
-                      {student.name}
-                    </h3>
+                    <h3>{student.name}</h3>
 
-                    <p>
-                      {student.email}
-                    </p>
+                    <p>{student.email}</p>
 
                   </div>
 

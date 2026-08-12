@@ -47,13 +47,9 @@ function CourseProvider({ children }) {
 
   const [courses, setCourses] = useState(() => {
 
-    const savedCourses =
-      localStorage.getItem("courses");
+    const savedCourses =localStorage.getItem("courses");
 
-    return savedCourses
-      ? JSON.parse(savedCourses)
-      : defaultCourses;
-
+    return savedCourses ? JSON.parse(savedCourses) : defaultCourses;
   });
 
 
@@ -61,63 +57,34 @@ function CourseProvider({ children }) {
 
     setCourses(updatedCourses);
 
-    localStorage.setItem(
-      "courses",
-      JSON.stringify(updatedCourses)
-    );
+    localStorage.setItem("courses",JSON.stringify(updatedCourses));
 
   }
 
 
   function addCourse(course) {
 
-    const newCourse = {
+    const newCourse = {...course,id: Date.now() };
 
-      ...course,
-
-      id: Date.now()
-
-    };
-
-
-    saveCourses([
-      ...courses,
-      newCourse
-    ]);
+    saveCourses([...courses,newCourse]);
 
   }
 
 
   function updateCourse(id, updatedCourse) {
 
-    const updatedCourses =
-      courses.map((course) =>
+    const updatedCourses = courses.map((course) =>course.id === Number(id)
 
-        course.id === Number(id)
+          ? { ...course,...updatedCourse} : course );
 
-          ? {
-            ...course,
-            ...updatedCourse
-          }
-
-          : course
-
-      );
-
-
-    saveCourses(updatedCourses);
+     saveCourses(updatedCourses);
 
   }
 
 
   function deleteCourse(id) {
 
-    const updatedCourses =
-      courses.filter(
-        (course) =>
-          course.id !== Number(id)
-      );
-
+    const updatedCourses =courses.filter(  (course) =>course.id !== Number(id));
 
     saveCourses(updatedCourses);
 
@@ -146,9 +113,7 @@ function CourseProvider({ children }) {
 
 export function useCourses() {
 
-  return useContext(
-    CourseContext
-  );
+  return useContext( CourseContext);
 
 }
 

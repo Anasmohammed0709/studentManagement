@@ -63,10 +63,7 @@ function Courses() {
 
     }
 
-    localStorage.setItem(
-      "courses",
-      JSON.stringify(defaultCourses)
-    );
+    localStorage.setItem("courses",JSON.stringify(defaultCourses));
 
     return defaultCourses;
 
@@ -74,8 +71,7 @@ function Courses() {
 
   function handleDeleteCourse(course) {
 
-    const studentCount =
-      getStudentCount(course.name);
+    const studentCount =getStudentCount(course.name);
 
     if (studentCount > 0) {
 
@@ -97,25 +93,17 @@ function Courses() {
     }
 
     const updatedCourses =
-      courses.filter(
-        (item) => item.id !== course.id
-      );
+      courses.filter((item) => item.id !== course.id);
 
     setCourses(updatedCourses);
 
-    localStorage.setItem(
-      "courses",
-      JSON.stringify(updatedCourses)
-    );
+    localStorage.setItem("courses",JSON.stringify(updatedCourses));
 
   }
 
   function getStudentCount(courseName) {
 
-    return students.filter(
-      (student) =>
-        student.course === courseName
-    ).length;
+    return students.filter((student) => student.course === courseName).length;
 
   }
 
@@ -127,9 +115,7 @@ function Courses() {
 
         <div>
 
-          <h1>
-            Courses
-          </h1>
+          <h1>Courses</h1>
 
           <p>
             Manage and view all available courses.
@@ -144,9 +130,7 @@ function Courses() {
 
           <BookOpen size={17} />
 
-          <span>
-            Add Course
-          </span>
+          <span>Add Course</span>
 
         </Link>
 
@@ -164,13 +148,9 @@ function Courses() {
 
           <div>
 
-            <p>
-              Total Courses
-            </p>
+            <p>Total Courses</p>
 
-            <h2>
-              {courses.length}
-            </h2>
+            <h2>{courses.length}</h2>
 
           </div>
 
@@ -186,13 +166,9 @@ function Courses() {
 
           <div>
 
-            <p>
-              Total Students
-            </p>
+            <p>Total Students</p>
 
-            <h2>
-              {students.length}
-            </h2>
+            <h2>{students.length}</h2>
 
           </div>
 
@@ -204,8 +180,7 @@ function Courses() {
 
         {courses.map((course) => {
 
-          const studentCount =
-            getStudentCount(course.name);
+          const studentCount =getStudentCount(course.name);
 
           return (
 
@@ -252,13 +227,9 @@ function Courses() {
 
                   <div>
 
-                    <strong>
-                      {studentCount}
-                    </strong>
+                    <strong>{studentCount}</strong>
 
-                    <small>
-                      Students
-                    </small>
+                    <small> Students</small>
 
                   </div>
 
@@ -273,9 +244,7 @@ function Courses() {
                     className="course-view-btn"
                   >
 
-                    <span>
-                      View Students
-                    </span>
+                    <span> View Students</span>
 
                     <ArrowRight size={15} />
 

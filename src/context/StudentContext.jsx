@@ -9,9 +9,7 @@ function StudentProvider({ children }) {
     const savedStudents =
       localStorage.getItem("students");
 
-    return savedStudents
-      ? JSON.parse(savedStudents)
-      : [];
+    return savedStudents ? JSON.parse(savedStudents) : [];
 
   });
 
@@ -20,25 +18,16 @@ function StudentProvider({ children }) {
 
     setStudents(updatedStudents);
 
-    localStorage.setItem(
-      "students",
-      JSON.stringify(updatedStudents)
-    );
+    localStorage.setItem( "students", JSON.stringify(updatedStudents));
 
   }
 
 
   function addStudent(student) {
 
-    const newStudent = {
-      ...student,
-      id: Date.now()
-    };
+    const newStudent = { ...student, id: Date.now()};
 
-    saveStudents([
-      ...students,
-      newStudent
-    ]);
+    saveStudents([ ...students,newStudent]);
 
   }
 
@@ -46,13 +35,8 @@ function StudentProvider({ children }) {
   function updateStudent(id, updatedStudent) {
 
     const updatedStudents = students.map(
-      (student) =>
-        student.id === Number(id)
-          ? {
-            ...student,
-            ...updatedStudent
-          }
-          : student
+      (student) => student.id === Number(id)
+          ? { ...student, ...updatedStudent } : student
     );
 
     saveStudents(updatedStudents);
@@ -62,11 +46,7 @@ function StudentProvider({ children }) {
 
   function deleteStudent(id) {
 
-    const updatedStudents =
-      students.filter(
-        (student) =>
-          student.id !== Number(id)
-      );
+    const updatedStudents =students.filter(  (student) =>student.id !== Number(id));
 
     saveStudents(updatedStudents);
 

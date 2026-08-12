@@ -77,9 +77,7 @@ function About() {
 
           </div>
 
-          <h3>
-            Course Management
-          </h3>
+          <h3>Course Management</h3>
 
           <p>
             Manage available courses and view the
@@ -92,9 +90,7 @@ function About() {
 
       <div className="about-features">
 
-        <h3>
-          What You Can Do
-        </h3>
+        <h3>What You Can Do</h3>
 
         <div className="about-feature-list">
 
@@ -102,9 +98,7 @@ function About() {
 
             <LayoutDashboard size={18} />
 
-            <span>
-              View the dashboard
-            </span>
+            <span>View the dashboard</span>
 
           </div>
 
@@ -112,9 +106,7 @@ function About() {
 
             <UserPlus size={18} />
 
-            <span>
-              Add and manage students
-            </span>
+            <span>Add and manage students</span>
 
           </div>
 
@@ -122,9 +114,7 @@ function About() {
 
             <BookOpen size={18} />
 
-            <span>
-              Add and manage courses
-            </span>
+            <span>Add and manage courses</span>
 
           </div>
 
@@ -132,9 +122,7 @@ function About() {
 
             <UserRound size={18} />
 
-            <span>
-              View student details
-            </span>
+            <span>View student details</span>
 
           </div>
 
@@ -142,9 +130,7 @@ function About() {
 
             <ShieldCheck size={18} />
 
-            <span>
-              Keep student information organized
-            </span>
+            <span>Keep student information organized</span>
 
           </div>
 

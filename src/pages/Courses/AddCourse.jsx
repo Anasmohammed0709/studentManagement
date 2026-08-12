@@ -41,24 +41,19 @@ function AddCourse() {
       return;
     }
 
-    const savedCourses =
-      localStorage.getItem("courses");
+    const savedCourses =localStorage.getItem("courses");
 
     const courses = savedCourses
       ? JSON.parse(savedCourses)
       : [];
 
     const courseExists = courses.some(
-      (course) =>
-        course.name.toLowerCase() ===
-        name.toLowerCase()
+      (course) => course.name.toLowerCase() === name.toLowerCase()
     );
 
     if (courseExists) {
 
-      setError(
-        "This course already exists."
-      );
+      setError("This course already exists.");
 
       return;
     }
@@ -68,15 +63,9 @@ function AddCourse() {
       shortName: short.toUpperCase(), description: desc
     };
 
-    const updatedCourses = [
-      ...courses,
-      newCourse
-    ];
+    const updatedCourses = [...courses,newCourse];
 
-    localStorage.setItem(
-      "courses",
-      JSON.stringify(updatedCourses)
-    );
+    localStorage.setItem("courses",JSON.stringify(updatedCourses));
 
     navigate("/courses");
 
@@ -94,17 +83,13 @@ function AddCourse() {
 
         <ArrowLeft size={15} />
 
-        <span>
-          Back to Courses
-        </span>
+        <span>Back to Courses</span>
 
       </Link>
 
       <div className="add-course-header">
 
-        <h1>
-          Add Course
-        </h1>
+        <h1> Add Course</h1>
 
         <p>
           Add a new course to your student
@@ -125,9 +110,7 @@ function AddCourse() {
 
           <div>
 
-            <h2>
-              Course Information
-            </h2>
+            <h2> Course Information</h2>
 
             <p>
               Enter the details of the new course.
@@ -221,9 +204,7 @@ function AddCourse() {
 
               <X size={16} />
 
-              <span>
-                Cancel
-              </span>
+              <span> Cancel</span>
 
             </Link>
 
@@ -234,9 +215,7 @@ function AddCourse() {
 
               <Save size={16} />
 
-              <span>
-                Save Course
-              </span>
+              <span>Save Course</span>
 
             </button>
 

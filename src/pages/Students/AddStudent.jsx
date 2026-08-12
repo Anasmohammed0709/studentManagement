@@ -94,17 +94,13 @@ function AddStudent() {
 
         <ArrowLeft size={15} />
 
-        <span>
-          Back to Students
-        </span>
+        <span> Back to Students</span>
 
       </Link>
 
       <div className="add-student-header">
 
-        <h1>
-          Add Student
-        </h1>
+        <h1> Add Student</h1>
 
         <p>
           Add a new student to your student
@@ -125,9 +121,7 @@ function AddStudent() {
 
           <div>
 
-            <h2>
-              Student Information
-            </h2>
+            <h2> Student Information</h2>
 
             <p>
               Enter the details of the new student.
@@ -210,9 +204,7 @@ function AddStudent() {
 
             <div className="add-student-form-group">
 
-              <label>
-                Gender
-              </label>
+              <label>Gender</label>
 
               <div className="gender-options">
 
@@ -228,9 +220,7 @@ function AddStudent() {
                     }
                   />
 
-                  <span>
-                    Male
-                  </span>
+                  <span>Male</span>
 
                 </label>
 
@@ -246,9 +236,7 @@ function AddStudent() {
                     }
                   />
 
-                  <span>
-                    Female
-                  </span>
+                  <span>Female</span>
 
                 </label>
 
@@ -364,9 +352,7 @@ function AddStudent() {
 
               <X size={16} />
 
-              <span>
-                Cancel
-              </span>
+              <span> Cancel</span>
 
             </Link>
 
@@ -377,9 +363,7 @@ function AddStudent() {
 
               <Save size={16} />
 
-              <span>
-                Save Student
-              </span>
+              <span>Save Student</span>
 
             </button>
 

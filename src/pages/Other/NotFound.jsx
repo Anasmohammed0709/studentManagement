@@ -16,24 +16,16 @@ function NotFound() {
           404
         </div>
 
-        <SearchX
-          size={45}
-          className="not-found-icon"
-        />
+        <SearchX size={45} className="not-found-icon" />
 
-        <h1>
-          Page Not Found
-        </h1>
+        <h1>  Page Not Found </h1>
 
         <p>
           Sorry, the page you're looking for
           doesn't exist or may have been moved.
         </p>
 
-        <Link
-          to="/"
-          className="not-found-home-btn"
-        >
+        <Link to="/" className="not-found-home-btn">
 
           <ArrowLeft size={16} />
 
