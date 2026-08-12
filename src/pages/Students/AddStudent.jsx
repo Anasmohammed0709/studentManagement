@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { ArrowLeft, UserPlus, Save, X } from "lucide-react";
 
-import { useStudents } from "../context/StudentContext";
+import { useStudents } from "../../context/StudentContext";
 
 import "./AddStudent.css";
 

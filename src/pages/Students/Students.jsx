@@ -4,7 +4,7 @@ import { Link, useSearchParams } from "react-router-dom";
 
 import { useState } from "react";
 
-import { useStudents } from "../context/StudentContext";
+import { useStudents } from "../../context/StudentContext";
 
 import "./Students.css";
 

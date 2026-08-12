@@ -5,7 +5,7 @@ import {
   Phone, User, BookOpen, CalendarDays, MapPin
 } from "lucide-react";
 
-import { useStudents } from "../context/StudentContext";
+import { useStudents } from "../../context/StudentContext";
 
 import "./StudentDetails.css";
 

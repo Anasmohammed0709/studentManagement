@@ -88,10 +88,7 @@ function CourseProvider({ children }) {
   }
 
 
-  function updateCourse(
-    id,
-    updatedCourse
-  ) {
+  function updateCourse(id, updatedCourse) {
 
     const updatedCourses =
       courses.map((course) =>
